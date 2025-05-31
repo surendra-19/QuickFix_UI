@@ -1,4 +1,5 @@
 import coverImage from '../assets/Cover.jpg'
+import LoginForm from '../components/LoginForm';
 import '../index.css'
 export default function AuthScreen() {
     return (
@@ -8,7 +9,7 @@ export default function AuthScreen() {
                         <img src={coverImage} alt="Cover" />
                     </div>
                     <div className="content-section">
-                        {/* Your form or content goes here */}
+                        <LoginForm/>
                     </div>
                 </div>
             </>
