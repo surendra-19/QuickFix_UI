@@ -6,6 +6,11 @@ export default function AuthScreen() {
             <>
                 <div className="auth-container">
                     <div className="image-section">
+                        <div className="text-content">
+                            <h1>Find Trusted</h1>
+                            <h1>Service Providers</h1>
+                            <p>Connect with reliable professionals for your various service needs.</p>
+                        </div>
                         <img src={coverImage} alt="Cover" />
                     </div>
                     <div className="content-section">

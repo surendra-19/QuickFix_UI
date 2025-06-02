@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './LoginForm.css';
-
+import Logo from '../assets/Logo.png';
 function LoginForm() {
   const [formData, setFormData] = useState({
     email: '',
@@ -20,27 +20,43 @@ function LoginForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="login-form">
-      <input 
-        type="email" 
-        name="email"
-        placeholder="Email" 
-        value={formData.email}
-        onChange={handleChange}
-        required
-      />
+    <>
+      <div className='loginContainer' >
+        <div className="topSection">
+          <img src={Logo} alt="Logo" />
+          <h2>Quick Fix</h2>
+        </div>
 
-      <input 
-        type="password" 
-        name="password"
-        placeholder="Password" 
-        value={formData.password}
-        onChange={handleChange}
-        required
-      />
+        <div className='bottomSection' >
+          
+          <form onSubmit={handleSubmit} className="login-form">
+            <h2>Welocme Back</h2>
+            <input 
+              type="email" 
+              name="email"
+              placeholder="Email" 
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
 
-      <button type="submit">Log In</button>
-    </form>
+            <input 
+              type="password" 
+              name="password"
+              placeholder="Password" 
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+
+            <button type="submit">Log In</button>
+
+            <h3>Don't have an account? </h3>
+            <h4>Sign up</h4>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
 

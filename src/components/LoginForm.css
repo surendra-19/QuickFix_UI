@@ -7,7 +7,7 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  /* height: 500px; */
+  height: 350px;
 }
 
 .login-form .input-row {
@@ -15,19 +15,9 @@
   gap: 12px;
 }
 
-.login-form input[type="text"] {
-  width: 200px;
-  height: 45px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 1rem;
-  flex: none;  
-}
-
 .login-form input[type="email"],
 .login-form input[type="password"] {
-  width: 410px;
+  width: 350px;
   height: 45px;
   padding: 8px;
   border: 1px solid #ccc;
@@ -39,15 +29,56 @@
 .login-form button {
   width: 100%;
   padding: 10px;
-  background-color: #3b82f6; /* blue-500 */
+  background-color: #ff7d33; 
   color: white;
   border: none;
   border-radius: 4px;
   font-weight: 600;
+  font-size: 17px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .login-form button:hover {
-  background-color: #2563eb; /* blue-600 */
+  background-color: #e75f11; 
+}
+
+.topSection {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 2px;      
+  cursor: pointer;         
+}
+
+.topSection img {
+  width: 40px;            
+  height: 40px;
+  object-fit: contain;  
+}
+
+.topSection h2 {
+  margin: 0;
+  font-size: 1.5rem;      
+  color: #333;            
+  font-weight: 600;
+}
+.loginContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
+  padding: 20px;
+}
+.bottomSection{
+  margin-bottom: 80px;
+}
+.bottomSection h3 {
+  text-align: center;
+}
+.bottomSection h2 {
+  margin-bottom: 20px;
+}
+.bottomSection h4 {
+  color: #88bab4;
 }
