@@ -1,5 +1,6 @@
 import coverImage from '../assets/Cover.jpg'
 import LoginForm from '../components/LoginForm';
+import SignUpForm from '../components/SignUpForm';
 import '../index.css'
 export default function AuthScreen() {
     return (
@@ -14,7 +15,8 @@ export default function AuthScreen() {
                         <img src={coverImage} alt="Cover" />
                     </div>
                     <div className="content-section">
-                        <LoginForm/>
+                        {/* <LoginForm/> */}
+                        <SignUpForm/>
                     </div>
                 </div>
             </>

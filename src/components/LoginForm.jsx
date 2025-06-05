@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './LoginForm.css';
-import Logo from '../assets/Logo.png';
+import LogoComponent from './LogoComponent';
 function LoginForm() {
   const [formData, setFormData] = useState({
     email: '',
@@ -22,10 +22,7 @@ function LoginForm() {
   return (
     <>
       <div className='loginContainer' >
-        <div className="topSection">
-          <img src={Logo} alt="Logo" />
-          <h2>Quick Fix</h2>
-        </div>
+        <LogoComponent/>
 
         <div className='bottomSection' >
           
