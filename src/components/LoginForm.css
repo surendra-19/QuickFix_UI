@@ -36,6 +36,7 @@
   font-size: 17px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin-top: 12px;
 }
 
 .login-form button:hover {
@@ -80,4 +81,7 @@
 }
 .bottomSection h4 {
   color: #88bab4;
+}
+.bottomSection a{
+  text-decoration: none;
 }

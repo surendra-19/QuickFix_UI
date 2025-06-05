@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './LoginForm.css';
 import LogoComponent from './LogoComponent';
+import { Link, Outlet } from 'react-router-dom';
+
 function LoginForm() {
   const [formData, setFormData] = useState({
     email: '',
@@ -49,7 +51,10 @@ function LoginForm() {
             <button type="submit">Log In</button>
 
             <h3>Don't have an account? </h3>
-            <h4>Sign up</h4>
+            {/* <Outlet /> */}
+            <Link to='/auth/signup' >
+              Sign up
+            </Link>
           </form>
         </div>
       </div>
