@@ -12,9 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Home/>} />
-          <Route path='/auth/*' element = {<AuthScreen/>} >
-            <Route path='login' element={<LoginForm/>} />
-            <Route path='signup' element = {<SignUpForm/>} />
+          <Route path='/authorization/' element = {<AuthScreen/>} >
           </Route>
         </Routes>
       </Router>

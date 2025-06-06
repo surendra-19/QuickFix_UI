@@ -1,6 +1,7 @@
 import React from 'react'
 import Logo from '../assets/Logo.png'
 import './LoginForm.css'
+import { Link } from 'react-router-dom'
 function LogoComponent() {
   return (
     <div className="topSection">

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './SignUpForm.css';
 import LogoComponent from './LogoComponent';
 
-function SignUpForm() {
+function SignUpForm({setFormType}) {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -85,7 +85,11 @@ function SignUpForm() {
 
             <button type="submit">Sign Up</button>
             <h3>Already have an account?</h3>
-            <h4>Log in</h4>
+            <h4
+              onClick={()=>setFormType('login')}
+            >
+              Log in
+            </h4>
           </form>
         </div>
       </div>
