@@ -1,8 +1,9 @@
 import React from 'react'
+import '../index.css'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className='container-padding'>Home</div>
   )
 }
 
