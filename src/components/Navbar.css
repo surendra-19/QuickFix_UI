@@ -1,12 +1,33 @@
+nav{
+    background-color: purple;
+}
 .navbarcontainer{
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 .nav-image{
     display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.nav-image h5{
+    font-size: 15px;
 }
 .nav-image img{
     width: 40px;            
     height: 40px;
     object-fit: contain;
+}
+.nav-menu{
+    display: flex;
+    gap: 25px;
+}
+.nav-menu h6{
+    font-size: 15px;
+    cursor: pointer;
+}
+.nav-button button{
+    cursor: pointer;
 }

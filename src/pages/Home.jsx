@@ -1,9 +1,12 @@
 import React from 'react'
 import '../index.css'
+import Navbar from '../components/Navbar'
 
 function Home() {
   return (
-    <div className='container-padding'>Home</div>
+    <div >
+      <Navbar/>
+    </div>
   )
 }
 
