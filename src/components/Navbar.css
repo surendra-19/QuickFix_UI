@@ -1,11 +1,12 @@
 nav{
-    background-color: purple;
+    padding: 0px 100px;
+    box-shadow: 0 8px 10px rgba(106, 109, 159, 0.2);
 }
 .navbarcontainer{
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0px;
 }
 .nav-image{
     display: flex;
@@ -28,6 +29,25 @@ nav{
     font-size: 15px;
     cursor: pointer;
 }
+.nav-menu h6:hover{
+    color: #F97316;
+}
 .nav-button button{
     cursor: pointer;
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: #F97316;
+    border: none;
+    color: white;
+    border-radius: 8%;
+    transition: background-color 0.3s ease;
+}
+.nav-button button:hover{
+    background-color: #ea580c;
+}
+.glass{
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        box-shadow: 0 5px 15px rgba(31, 38, 135, 0.3);
 }

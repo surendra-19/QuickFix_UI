@@ -4,10 +4,12 @@ import './LoginForm.css'
 import { Link } from 'react-router-dom'
 function LogoComponent() {
   return (
-    <div className="topSection">
-        <img src={Logo} alt="Logo" />
-        <h2>Quick Fix</h2>
-    </div>
+    <Link style={{textDecoration:"none"}} to='/'>
+      <div className="topSection">
+            <img src={Logo} alt="Logo" />
+            <h3>Quick Fix</h3>
+      </div>
+    </Link>
   )
 }
 
