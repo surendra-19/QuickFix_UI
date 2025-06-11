@@ -1,0 +1,128 @@
+.city-selector {
+  position: relative;
+  width: 300px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 5px;
+  outline: none;
+}
+
+.selected-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.chip {
+  background-color: white;
+  padding: 4px 8px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border: 1px solid #d4cbcb;
+}
+
+.remove-btn {
+  margin-left: 5px;
+  border: none;
+  background: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 1px;
+}
+.remove-btn:hover{
+  color: #e75f11;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 4px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+}
+
+.city-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.city-list li {
+  margin-bottom: 4px;
+}
+
+.no-match {
+  font-style: italic;
+  color: #999;
+}
+.btn-select{
+  border: 1px solid;
+  padding: 5px 10px;
+  background-color: #ff7d33;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn-select:hover{
+  background-color: #e75f11;
+}
+.checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  vertical-align: middle;
+  background-color: #fff;
+  margin-right: 5px;
+}
+
+.checkbox:checked {
+  background-color: #ff7d33;
+  border-color: #ff7d33;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 4px;
+  width: 4px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+label{
+  display: flex;
+  align-items: center;
+}
