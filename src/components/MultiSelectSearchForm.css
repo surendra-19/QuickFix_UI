@@ -12,6 +12,7 @@
   border: 2px solid;
   border-radius: 5px;
   outline: none;
+  margin-left: -20px;
 }
 
 .selected-chips {

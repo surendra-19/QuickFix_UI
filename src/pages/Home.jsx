@@ -9,7 +9,18 @@ function Home() {
     <div className='home-container' >
       <Navbar/>
       <div className="page-container">
-        <MultiSelectSearchForm/>
+        <div className='home-layout'>
+          <div>
+            <h1>Find Reliable Service Experts</h1>
+            <span>Choose the service you need and book easily</span>
+            <MultiSelectSearchForm/>
+            <MultiSelectSearchForm/>
+            <button className='orange-btn' >Search</button>
+          </div>
+          <div>
+              <img className='Home-Image-1' src={Image1} alt='Home-Image-1' />
+          </div>
+        </div>
       </div>
     </div>
   )

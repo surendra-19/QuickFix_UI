@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './LoginForm.css';
+import '../index.css'
 import LogoComponent from './LogoComponent';
 
 function LoginForm({setFormType}) {
@@ -47,7 +48,7 @@ function LoginForm({setFormType}) {
               required
             />
 
-            <button type="submit">Log In</button>
+            <button className='orange-btn' type="submit">Log In</button>
 
             <h3>Don't have an account? </h3>
             <h4
