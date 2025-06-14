@@ -10,15 +10,16 @@ function Home() {
       <Navbar/>
       <div className="page-container">
         <div className='home-layout'>
-          <div>
-            <h1>Find Reliable Service Experts</h1>
+          <div className='home-layout-left'>
+            <h1>Find Reliable </h1>
+            <h1>Service Experts</h1>
             <span>Choose the service you need and book easily</span>
             <MultiSelectSearchForm/>
             <MultiSelectSearchForm/>
             <button className='orange-btn' >Search</button>
           </div>
-          <div>
-              <img className='Home-Image-1' src={Image1} alt='Home-Image-1' />
+          <div className='home-layout-right'>
+              <img src={Image1} alt='Home-Image-1' />
           </div>
         </div>
       </div>

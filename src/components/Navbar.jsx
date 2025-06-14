@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
-import Logo from '../assets/Logo.png'
 import './Navbar.css'
 import LogoComponent from './LogoComponent';
 export default function Navbar() {
     return (
         <>
-            <nav className='glass'>
+            <nav>
                 <div className='navbarcontainer'>
                     <LogoComponent/>
                     <div className='nav-menu'>

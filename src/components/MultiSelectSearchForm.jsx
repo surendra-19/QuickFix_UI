@@ -1,115 +1,102 @@
-import { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './MultiSelectSearchForm.css';
 
-const CITIES = ['Hyderabad', 'Chennai', 'Mumbai'];
+const citiesList = ['Hyderabad', 'Vijayawada', 'Chennai', 'Mumbai'];
 
-const MultiSelectSearchForm = () => {
-  const [selectedCities, setSelectedCities] = useState([]);
+export default function MultiSelectSearchForm() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const [selectedCities, setSelectedCities] = useState([]);
+  const dropdownRef = useRef();
 
-  const filteredCities = CITIES.filter((city) =>
+  const toggleDropdown = () => setDropdownOpen(prev => !prev);
+
+  const filteredCities = citiesList.filter(city =>
     city.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  const areAllFilteredCitiesSelected =
-    filteredCities.length > 0 &&
-    filteredCities.every((city) => selectedCities.includes(city));
+  const isAllSelected = selectedCities.length === citiesList.length;
 
-  const toggleCity = (city) => {
+  const handleSelectAllToggle = () => {
+    if (isAllSelected) {
+      setSelectedCities([]);
+    } else {
+      setSelectedCities([...citiesList]);
+    }
+  };
+
+  const handleCheckboxChange = (city) => {
     setSelectedCities((prev) =>
-      prev.includes(city) ? prev.filter((c) => c !== city) : [...prev, city]
+      prev.includes(city)
+        ? prev.filter((item) => item !== city)
+        : [...prev, city]
     );
   };
 
-  const selectAll = () => {
-    const newSelections = [
-      ...new Set([...selectedCities, ...filteredCities])
-    ];
-    setSelectedCities(newSelections);
+  const displaySelected = () => {
+    if (selectedCities.length === 0) return 'Search city';
+    if (selectedCities.length === citiesList.length) {
+      return `${citiesList[0]} +${citiesList.length - 1}`;
+    }
+    if (selectedCities.length <= 2) return selectedCities.join(', ');
+    return `${selectedCities[0]} +${selectedCities.length - 1}`;
   };
 
-  const unselectAll = () => {
-    setSelectedCities((prev) =>
-      prev.filter((city) => !filteredCities.includes(city))
-    );
-  };
-
+  // Close dropdown on outside click
   useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (
-        dropdownRef.current &&
-        !dropdownRef.current.contains(event.target)
-      ) {
-        setIsDropdownOpen(false);
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
-    return () =>
-      document.removeEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
-    <div className="city-selector">
-      <input
-        type="text"
-        className="search-input"
-        placeholder="Search cities..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        onFocus={() => setIsDropdownOpen(true)}
-      />
-
-      <div className="selected-chips">
-        {selectedCities.map((city) => (
-          <span className="chip" key={city}>
-            {city}
-            <button
-              className="remove-btn"
-              onMouseDown={(e) => e.stopPropagation()}
-              onClick={() => toggleCity(city)}
-            >
-              &times;
-            </button>
-          </span>
-        ))}
+    <div className="multi-select-container" ref={dropdownRef}>
+      <div className="dropdown-box" onClick={toggleDropdown}>
+        {displaySelected()}
       </div>
 
-      {isDropdownOpen && (
-        <div className="dropdown" ref={dropdownRef}>
-          {filteredCities.length > 0 && (
-            <div className="actions">
-              {!areAllFilteredCitiesSelected && (
-                <button className='btn-select' onClick={selectAll}>Select All</button>
-              )}
-              {areAllFilteredCitiesSelected && (
-                <button className='btn-select' onClick={unselectAll}>Unselect All</button>
-              )}
-            </div>
-          )}
-          <ul className="city-list">
+      {dropdownOpen && (
+        <div className="dropdown-list">
+          <div className="select-all">
+            <input
+              type="checkbox"
+              checked={isAllSelected}
+              onChange={handleSelectAllToggle}
+            />
+            <label onClick={handleSelectAllToggle}>
+              {isAllSelected ? 'Unselect all' : 'Select all'}
+            </label>
+          </div>
+
+          <div className="search-bar">
+            <input
+              type="text"
+              placeholder="Search city"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+
+          <div className="checkbox-list">
             {filteredCities.map((city) => (
-              <li key={city}>
-                <label>
-                  <input
-                    className='checkbox'
-                    type="checkbox"
-                    checked={selectedCities.includes(city)}
-                    onChange={() => toggleCity(city)}
-                  />
+              <div key={city} className="checkbox-item">
+                <input
+                  type="checkbox"
+                  checked={selectedCities.includes(city)}
+                  onChange={() => handleCheckboxChange(city)}
+                />
+                <label onClick={() => handleCheckboxChange(city)}>
                   {city}
                 </label>
-              </li>
+              </div>
             ))}
-            {filteredCities.length === 0 && (
-              <li className="no-match">No cities found</li>
-            )}
-          </ul>
+          </div>
         </div>
       )}
     </div>
   );
-};
-
-export default MultiSelectSearchForm;
+}

@@ -14,16 +14,16 @@
 }
 
 .image-section {
-  text-align: center; /* center align text and image */
-  max-width: 600px;   /* optional max width */
-  margin: 0 auto;     /* center container horizontally */
+  text-align: center; 
+  max-width: 600px;   
+  margin: 0 auto;     
 }
 
 .text-content h1 {
   text-align: left;
   margin: 0;
   font-size: 2.5rem;
-  color: #333;       /* dark text */
+  color: #333;       
 }
 
 .text-content p {  
@@ -54,7 +54,7 @@
 }
 
 .page-container {
-  padding: 20px;
+  padding: 0px 10px;
   max-width: 1350px;
   margin: 0 auto;
 }
@@ -64,6 +64,7 @@
 .home-layout{
   display: flex;
   justify-content: space-between;
+  height: 90.5vh;
 }
 .orange-btn{
   width: 100%;
@@ -81,4 +82,24 @@
 
 .orange-btn:hover {
   background-color: #e75f11; 
+}
+
+.home-layout-right{
+  height: 665px;
+
+}
+.home-layout-right img{
+  height: 99%;
+}
+.home-layout-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-layout-left h1{
+  font-size: 55px;
+}
+.home-layout-left span{
+  font-size: 25px;
+  margin: 15px 0px;
 }
