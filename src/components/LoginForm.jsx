@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './LoginForm.css';
+import '../styles/LoginForm.css';
 import '../index.css'
 import LogoComponent from './LogoComponent';
 

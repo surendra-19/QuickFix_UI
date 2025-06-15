@@ -3,8 +3,12 @@ import coverImage from '../assets/Cover.jpg'
 import LoginForm from '../components/LoginForm';
 import '../index.css'
 import SignUpForm from '../components/SignUpForm';
+import ServiceProviderSignup from '../components/ServiceProviderSignup';
+import { useLocation } from 'react-router-dom';
 export default function AuthScreen() {
-    const [formType,setFormType] = useState('login')
+    const location = useLocation();
+    const initialFormstate = location.state?.formType === 'serviceProvider' ? 'serviceProvider' : 'login';
+    const [formType, setFormType] = useState(initialFormstate);
     return (
             <>
                 <div className="auth-container">
@@ -19,6 +23,7 @@ export default function AuthScreen() {
                     <div className="content-section">
                         { formType == 'login' && <LoginForm setFormType={setFormType} /> }
                         { formType == 'signup' && <SignUpForm setFormType={setFormType} /> }
+                        { formType == 'serviceProvider' && <ServiceProviderSignup setFormType = {setFormType} /> }
                     </div>
                 </div>
             </>
