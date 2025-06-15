@@ -51,3 +51,7 @@ nav{
 .nav-button button:hover{
     background-color: #ea580c;
 }
+.service-provider{
+    text-decoration: none;
+    color: black;
+}

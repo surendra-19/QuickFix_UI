@@ -1,0 +1,45 @@
+.service-provider-form{
+     padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: auto;
+}
+.service-provider-form h2{
+    text-align: center;
+}
+
+.service-provider-form .input-row {
+  display: flex;
+  gap: 12px;
+}
+
+.service-provider-form input[type="text"],
+.service-provider-form input[type="email"],
+.service-provider-form input[type="password"],
+.service-provider-form select {
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.service-provider-form .input-row input {
+    width: 170px; 
+}
+
+.service-provider-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90vh;
+    padding: 20px;
+}
+
+.custom-width-wrapper .multi-select-container {
+  width: 100%; 
+}
