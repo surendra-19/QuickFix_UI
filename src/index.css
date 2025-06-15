@@ -103,3 +103,31 @@
   font-size: 25px;
   margin: 15px 0px;
 }
+input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type='checkbox']:checked {
+  background-color: #ff7d33;
+  border-color: #ff7d33;
+}
+
+input[type='checkbox']:checked::after {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 3.5px;
+  width: 4px;
+  height: 9px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}

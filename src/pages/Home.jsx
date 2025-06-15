@@ -3,6 +3,7 @@ import '../index.css'
 import Navbar from '../components/Navbar'
 import Image1 from '../assets/Home_Image1.jpg'
 import MultiSelectSearchForm from '../components/MultiSelectSearchForm'
+import Footer from '../components/Footer'
 
 function Home() {
   return (
@@ -14,8 +15,10 @@ function Home() {
             <h1>Find Reliable </h1>
             <h1>Service Experts</h1>
             <span>Choose the service you need and book easily</span>
-            <MultiSelectSearchForm/>
-            <MultiSelectSearchForm/>
+            <div style={{display:'flex',gap:'17px',margin:'7px 0px'}}>
+              <MultiSelectSearchForm/>
+              <MultiSelectSearchForm/>
+            </div>
             <button className='orange-btn' >Search</button>
           </div>
           <div className='home-layout-right'>
@@ -23,6 +26,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   )
 }

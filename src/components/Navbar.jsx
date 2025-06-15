@@ -11,6 +11,7 @@ export default function Navbar() {
                         <h6>Home</h6>
                         <h6>About Us</h6>
                         <h6>Get Started</h6>
+                        <h6>Work With Us</h6>
                     </div>
                     <div className='nav-button'>
                         <Link to='/authorization'>

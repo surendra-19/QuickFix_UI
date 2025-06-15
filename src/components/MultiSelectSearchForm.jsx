@@ -42,7 +42,6 @@ export default function MultiSelectSearchForm() {
     return `${selectedCities[0]} +${selectedCities.length - 1}`;
   };
 
-  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
