@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './SignUpForm.css';
+import '../styles/SignUpForm.css';
 import LogoComponent from './LogoComponent';
 
 function SignUpForm({setFormType}) {

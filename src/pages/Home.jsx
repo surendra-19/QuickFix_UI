@@ -3,7 +3,8 @@ import '../index.css'
 import Navbar from '../components/Navbar'
 import Image1 from '../assets/Home_Image1.jpg'
 import MultiSelectSearchForm from '../components/MultiSelectSearchForm'
-import Footer from '../components/Footer'
+import Footer from '../sections/Footer'
+import AboutUs from '../sections/AboutUs'
 
 function Home() {
   return (
@@ -25,6 +26,7 @@ function Home() {
               <img src={Image1} alt='Home-Image-1' />
           </div>
         </div>
+        <AboutUs/>
       </div>
       <Footer/>
     </div>

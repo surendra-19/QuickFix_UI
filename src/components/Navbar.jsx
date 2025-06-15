@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
-import './Navbar.css'
+import '../styles/Navbar.css'
 import LogoComponent from './LogoComponent';
-export default function Navbar() {
+export default function Navbar({setFormType}) {
+    
     return (
         <>
             <nav>
@@ -11,7 +12,9 @@ export default function Navbar() {
                         <h6>Home</h6>
                         <h6>About Us</h6>
                         <h6>Get Started</h6>
-                        <h6>Work With Us</h6>
+                        <Link className='service-provider' to='/authorization' state={{formType:'serviceProvider'}}>
+                            <h6>Work With Us</h6>
+                        </Link>
                     </div>
                     <div className='nav-button'>
                         <Link to='/authorization'>

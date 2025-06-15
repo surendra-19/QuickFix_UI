@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import './MultiSelectSearchForm.css';
+import '../styles/MultiSelectSearchForm.css';
 
 const citiesList = ['Hyderabad', 'Vijayawada', 'Chennai', 'Mumbai'];
 
