@@ -13,6 +13,11 @@
 }
 
 .dropdown-list {
+  position: absolute;         
+  top: 100%;                  
+  left: 0;
+  z-index: 10;
+  width: 100%;
   margin-top: 6px;
   border: 1px solid #aaa;
   border-radius: 4px;
@@ -28,6 +33,7 @@
   align-items: center;
   padding: 8px;
   border-bottom: 1px solid #ddd;
+  cursor: pointer;
 }
 
 .select-all:hover,
@@ -38,13 +44,18 @@
 .select-all input,
 .checkbox-item input {
   margin-right: 8px;
+  cursor: pointer;
 }
 
 .search-bar input {
   width: 100%;
   padding: 8px;
+  height: 35px;
   border: none;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #bebdbd;
+  border-bottom: 1px solid #bebdbd;
   outline: none;
+}
+label{
+  cursor: pointer;
 }
