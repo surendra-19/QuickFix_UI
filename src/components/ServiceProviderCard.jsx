@@ -1,27 +1,26 @@
 import '../styles/ServiceProviderCard.css';
 import '../index.css';
-import DP from '../assets/demoCard.jpg';
 
-export default function ServiceProviderCard() {
+export default function ServiceProviderCard({image,name,service,rating,location,orders}) {
     return (
         <div className="service-card-container">
             <div className="left-section">
                 <img 
-                    src={DP}
+                    src={image}
                     alt="service-provider"
                     className="service-provider-image"
                 />
             </div>
             <div className="right-section">
                 <div className="details-section">
-                    <h2 className="title">Service Provider Name</h2>
+                    <h2 className="title">{name}</h2>
                     <div className="info-group">
-                        <p>Service</p>
-                        <span>4.8</span>
+                        <p>{service}</p>
+                        <span>{rating}</span>
                     </div>
                     <div className="info-group1">
-                        <span>Location</span>
-                        <p>120 Orders</p>
+                        <span>{location}</span>
+                        <p>{orders}</p>
                     </div>
                 </div>
                 <div className="action-section">
