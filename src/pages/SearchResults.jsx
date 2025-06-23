@@ -1,5 +1,5 @@
 import '../styles/SearchResults.css';
-import sample from '../assets/demoCard.jpg'
+import sample from '../assets/download.jpg'
 import Footer from '../sections/Footer';
 import Navbar from '../components/Navbar';
 import ServiceProviderCard from '../components/ServiceProviderCard';
